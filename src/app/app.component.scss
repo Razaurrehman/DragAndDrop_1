@@ -1,0 +1,106 @@
+.main-container {
+    border: 1px solid #cecece;
+    padding: 28px;
+    margin-top: 35px;
+    margin: 10px;
+    border-radius: 15px;
+    background: #ffffff;
+}
+
+.example-container-header {
+    width: 200px;
+    max-width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 40px;
+    position: fixed;
+}
+
+.example-container-content {
+    width: 1000px;
+    max-width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 250px;
+}
+
+.example-list {
+    border: solid 1px #ccc;
+    height: 27rem;
+    background: white;
+    border-radius: 4px;
+    overflow-y: auto;
+    display: block;
+    position: relative;
+}
+
+.example-box {
+    padding: 20px 10px;
+    border-bottom: solid 1px #ccc;
+    color: rgba(0, 0, 0, 0.87);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    cursor: move;
+    background: white;
+    font-size: 14px;
+}
+
+.cdk-drag-preview {
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.cdk-drag-placeholder {
+    opacity: 0;
+}
+
+.cdk-drag-animating {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.example-box:last-child {
+    border: none;
+}
+
+.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.delete-btn {
+    text-align: right;
+    opacity: 0;
+}
+
+.lists-a:hover {
+    .delete-btn {
+        opacity: 1;
+        transition: opacity .50s ease-in-out;
+        -moz-transition: opacity .50s ease-in-out;
+        -webkit-transition: opacity .50s ease-in-out;
+    }
+}
+
+.lists-a {
+    border-bottom: 1px solid #b9b9b9;
+}
+
+.btn-change {
+    min-width: 0;
+    padding: 0 5px;
+    border-radius: 0;
+    line-height: 26px;
+}
+
+.icon-a {
+    font-size: 18px !important;
+}
+
+.pdf-a {
+    text-align: right;
+    margin-right: 14px;
+    margin-top: 12px;
+}
