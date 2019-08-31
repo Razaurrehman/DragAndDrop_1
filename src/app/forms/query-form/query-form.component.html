@@ -1,1 +1,49 @@
-<p>{{queryForm?.key}}!</p>
+<div class="form-margin">
+    <div>
+        <form [formGroup]="queryForPDFForm" (ngSubmit)="formSubmitPDF()">
+            <p class="heading">{{queryForm?.name}}</p>
+
+            <div>
+                <mat-label class="margin-a">Stream</mat-label>
+                <div class="form-style">
+                    <mat-select placeholder="Streams" class="width-a" [formControl]="queryForPDFForm.controls['stream']" multiple>
+                        <mat-option *ngFor="let stream of streamList" [value]="stream">{{stream}}</mat-option>
+                    </mat-select>
+                </div>
+            </div>
+            <div>
+                <mat-label class="margin-a">Date</mat-label>
+                <div class="date-picker-a">
+                    <input class="no-border" placeholder="date" type="text" ngxDaterangepickerMd [locale]="{applyLabel: 'ok', format: 'DD MMMM YYYY'}" startKey="start" endKey="end" [ranges]="ranges" [formControl]="queryForPDFForm.controls['date']">
+                </div>
+            </div>
+
+            <div>
+                <mat-label class="margin-a">Range</mat-label>
+                <div class="date-picker-a">
+                    <input class="no-border" placeholder="date" type="text" [locale]="{applyLabel: 'ok', format: 'DD MMMM YYYY'}" ngxDaterangepickerMd startKey="start" endKey="end" [ranges]="ranges" [formControl]="queryForPDFForm.controls['range']">
+                </div>
+            </div>
+
+            <div>
+                <mat-label class="margin-a">Matric</mat-label>
+                <div class="form-style">
+
+                    <mat-select class="width-a" placeholder="matric" [formControl]="queryForPDFForm.controls['metric']">
+                        <mat-option [value]="'auidence'">Audience</mat-option>
+                        <mat-option [value]="'activity'">Activity</mat-option>
+                        <mat-option [value]="'engagement'">Engagement</mat-option>
+                    </mat-select>
+                </div>
+            </div>
+
+            <div>
+                <mat-label class="margin-a">Max Limit</mat-label>
+                <div class="date-picker-a">
+                    <input matInput class="no-border" placeholder="max limit" type="number" [formControl]="queryForPDFForm.controls['max_limit']">
+                </div>
+            </div>
+            <button type="submit" mat-raised-button color="primary" class="form-submit-btn">Submit</button>
+        </form>
+    </div>
+</div>

@@ -5,6 +5,7 @@
     margin: 10px;
     border-radius: 15px;
     background: #ffffff;
+    min-height: 500px;
 }
 
 .example-container-header {
@@ -17,8 +18,8 @@
 }
 
 .example-container-content {
-    width: 1000px;
-    max-width: 100%;
+    width: calc(100% - 250px);
+    max-width: calc(100% - 250px);
     display: inline-block;
     vertical-align: top;
     margin-left: 250px;
@@ -85,7 +86,10 @@
 }
 
 .lists-a {
-    border-bottom: 1px solid #b9b9b9;
+    border: 1px solid #b9b9b9;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background: #f9f9f9;
 }
 
 .btn-change {

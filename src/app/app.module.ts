@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,11 @@ import { DonutChartComponent } from './charts/donut-chart/donut-chart.component'
 import { ChartModule } from 'angular-highcharts';
 import { MatButtonModule } from '@angular/material/button';
 import { QueryFormComponent } from './forms/query-form/query-form.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
 
 @NgModule({
   declarations: [
@@ -35,7 +41,17 @@ import { QueryFormComponent } from './forms/query-form/query-form.component';
     DragDropModule,
     MatCardModule,
     ChartModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatInputModule,
+    MatSelectModule,
+    NgxDaterangepickerMd.forRoot({
+      separator: ' - to - ',
+      applyLabel: 'Okay',
+    })
   ],
   providers: [AppService],
   bootstrap: [AppComponent]

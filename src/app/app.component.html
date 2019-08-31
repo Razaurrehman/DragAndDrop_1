@@ -13,7 +13,7 @@
     <div class="example-container-content">
         <h2>Content</h2>
         <div #listOf>
-            <div cdkDropList #doneList="cdkDropList" [cdkDropListData]="content" [cdkDropListConnectedTo]="[todoList]" class="example-list" (cdkDropListDropped)="drop($event)">
+            <div cdkDropList #doneList="cdkDropList" [cdkDropListData]="content" [cdkDropListConnectedTo]="[todoList]" (cdkDropListDropped)="drop($event)">
                 <div class="lists-a" *ngFor="let item of content ; index as i">
                     <div class="delete-btn">
                         <button mat-raised-button class="btn-change" color="primary" (click)="deleteItem(i)"><i
